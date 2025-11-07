@@ -1,0 +1,70 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# Dist / Build outputs
+dist/
+build/
+.cache/
+.tmp/
+coverage/
+.DS_Store
+
+# ----------------------------
+# Frontend (React/Vite)
+# ----------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+frontend/.env
+frontend/.env.*
+
+# ----------------------------
+# Backend (Express)
+# ----------------------------
+backend/node_modules/
+backend/dist/
+backend/uploads/
+backend/.env
+backend/.env.*
+
+# ----------------------------
+# Editor / OS Files
+# ----------------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ----------------------------
+# Optional: Debug or Temporary
+# ----------------------------
+*.bak
+*.tmp
+*.log
+*.local
+*.env.backup

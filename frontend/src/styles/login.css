@@ -1,0 +1,127 @@
+/* ========================================================
+   Premium Professional Login UI
+   Clean • Modern • Responsive • Glassmorphism
+   ======================================================== */
+
+/* Fullscreen Centering */
+.login-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #1b2b4a, #0f172a);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass Card */
+.login-card {
+  width: 400px;
+  padding: 40px 35px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.3);
+
+  animation: fadeUp 0.7s ease;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-card h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* Input Styles */
+.login-input {
+  width: 90%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  font-size: 15px;
+
+  transition: all 0.2s ease;
+}
+
+.login-input:focus {
+  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.18);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+/* Error Message */
+.login-error {
+  background: rgba(255, 0, 0, 0.15);
+  border-left: 4px solid #ef4444;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #fca5a5;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 30px 25px;
+  }
+}
