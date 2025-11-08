@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // your backend URL
+  baseURL: "https://exam-hall-invigilation.onrender.com/api", // your backend URL
 });
 
 // Add JWT token automatically if stored
