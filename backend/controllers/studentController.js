@@ -5,6 +5,34 @@ export const getStudentsByHall = async (req, res) => {
   res.json(students);
 };
 
+export const updateStudent = async (req, res) => {
+  try {
+    const { id } = req.params;  // This will be the student's MongoDB _id
+    const updates = req.body;   // The fields to update dynamically
+
+    // Validate input
+    if (!updates || Object.keys(updates).length === 0) {
+      return res.status(400).json({ message: "No update data provided" });
+    }
+
+    // Find and update student
+    const student = await Student.findByIdAndUpdate(id, updates, { new: true });
+
+    if (!student) {
+      return res.status(404).json({ message: "Student not found" });
+    }
+
+    res.status(200).json({
+      message: "✅ Student updated successfully",
+      student,
+    });
+  } catch (error) {
+    console.error("Error updating student:", error);
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
 export const updateStudentStatus = async (req, res) => {
   try{
   console.log(req.params);
