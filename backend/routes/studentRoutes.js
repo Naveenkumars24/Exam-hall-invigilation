@@ -3,9 +3,8 @@ import { getStudentsByHall, updateStudentStatus ,toggleStudentField, updateStude
 const router = express.Router();
 
 router.get("/hall/:hallId", getStudentsByHall);
-router.post("/:id", updateStudentStatus);
-
 router.post("/add", addStudent);
+router.post("/:id", updateStudentStatus);
 
 router.put("/update/:id", updateStudent);
 router.post("/update/:id", toggleStudentField);
