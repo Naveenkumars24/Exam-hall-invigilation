@@ -14,6 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("✅ Exam Hall Invigilation Backend is Running");
+});
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/halls", hallRoutes);
