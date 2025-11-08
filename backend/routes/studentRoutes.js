@@ -1,9 +1,11 @@
 import express from "express";
-import { getStudentsByHall, updateStudentStatus ,toggleStudentField, updateStudent} from "../controllers/studentController.js";
+import { getStudentsByHall, updateStudentStatus ,toggleStudentField, updateStudent , addStudent} from "../controllers/studentController.js";
 const router = express.Router();
 
 router.get("/hall/:hallId", getStudentsByHall);
 router.post("/:id", updateStudentStatus);
+
+router.post("/add", addStudent);
 
 router.put("/update/:id", updateStudent);
 router.post("/update/:id", toggleStudentField);
