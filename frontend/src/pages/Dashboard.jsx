@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/SideBar";
 import Header from "../components/Header";
 import StatsCard from "../components/StatsCard";
 import StudentTable from "../components/StudentTable";
